@@ -20,13 +20,13 @@
     {% if category %}
         <div class="row my_row_class">
             <div class="mx_auto">
-                <p><a href="{% url 'shopapp:allProdCat' %}">Our product Collections</a></p>
+                <p><a href="{% url 'shopapp:allProdCat' %}" style="width: 200px; height: 200px;">Our product Collections</a></p>
             </div>
         </div>
     {% endif %}
     <div class="mx_auto">
         {% if category %}
-            <img class="my_image" src="{{category.image.url}}" alt="{{category.name}}" width="230px;" height="230px;" >
+            <img class="my_image" src="{{category.image.url}}" alt="{{category.name}}" style="width: 200px; height: 200px;" >
     </div>
     <br>
     <div>
@@ -47,8 +47,8 @@
         <div class="row mx_auto">
             {%  for product in products.object_list %}
             <div class="my_bottom_margin col-9 col-sm-12 col-md-4 col-lg-4">
-                <div class="card text-center " style="min-width: 18rem;">
-                    <a href="{{product.get_url}}"><img class="card-img-top my_image " src="{{product.image.url}}" alt="{{product.name}}" width="230px;" height="230px;"></a>
+                <div class="card text-center " style="min-width: 10rem;">
+                    <a href="{{product.get_url}}"><img class="card-img-top my_image " src="{{product.image.url}}" alt="{{product.name}}" style="width: 230;height: 230px;"></a>
                 <div class="card-body"> 
                     <h4>{{product.name}}</h4>
                     <p>{{product.price}}</p>
